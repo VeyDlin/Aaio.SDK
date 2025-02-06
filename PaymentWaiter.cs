@@ -27,12 +27,12 @@ public class PaymentWaiter {
 
 
 
-    public void Startup(IEnumerable<string> orderIds, TimeSpan runSscatter) {
+    public void Startup(IEnumerable<string> orderIds, TimeSpan runScatter) {
         var random = new Random();
 
         foreach (var orderId in orderIds) {
             Task.Run(async () => {
-                var delay = random.Next(0, (int)runSscatter.TotalMilliseconds);
+                var delay = random.Next(0, (int)runScatter.TotalMilliseconds);
                 await Task.Delay(delay);
 
                 AddWaiter(orderId,
