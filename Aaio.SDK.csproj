@@ -1,25 +1,27 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageId>Aaio.SDK</PackageId>
+    <Authors>VeyDlin</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/VeyDlin/Aaio.SDK</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>.NET SDK for AAIO payment gateway API. Supports payments, withdrawals, webhooks, and merchant operations with full async/await support.</Description>
+    <PackageTags>aaio;payment;gateway;api;merchant;sdk;payments;withdrawals</PackageTags>
+  </PropertyGroup>
 
-	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<Version>0.0.2</Version>
-		<PackageId>Aaio.SDK</PackageId>
-		<Authors>VeyDlin</Authors>
-		<Description>aaio.so SDK</Description>
-		<PackageTags>aaio;aaio.so;API;SDK</PackageTags>
-		<RepositoryUrl>https://github.com/VeyDlin/Aaio.SDK</RepositoryUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
-	
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.4" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	</ItemGroup>
-	
-	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\" />
-	</ItemGroup>
-	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.10" />
+    <PackageReference Include="System.Text.Json" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
